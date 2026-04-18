@@ -5,7 +5,7 @@ import SpacesOverview from './views/SpacesOverview';
 import SpaceDetailView from './views/SpaceDetailView';
 import TrackerView from './views/TrackerView';
 import SuggestionsView from './views/SuggestionsView';
-import './App.css'; 
+import './App.css';
 
 function App() {
   return (
