@@ -1,0 +1,305 @@
+/* ========================================
+   Suggestions View — Focus Flow
+   Matches "Luminous Sanctuary" design system
+   ======================================== */
+
+.suggestions-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  animation: suggestFadeIn 0.5s ease-out forwards;
+}
+
+@keyframes suggestFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Page Header ---- */
+.suggestions-page-header {
+  padding: 0 0 2rem 0;
+  flex-shrink: 0;
+}
+
+.suggestions-page-header h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-on-surface);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.suggestions-page-header p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-on-surface-variant);
+  margin: 0;
+}
+
+/* ---- Tab Navigation ---- */
+.focus-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-shrink: 0;
+}
+
+.focus-tab {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  color: var(--color-on-surface-variant);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.focus-tab:hover {
+  background-color: var(--color-surface-container);
+  color: var(--color-on-surface);
+}
+
+.focus-tab.active {
+  background-color: var(--color-surface-container);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ---- Carousel Container ---- */
+.focus-carousel-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  /* Clip everything but allow the peek to show via the inner overflow trick */
+}
+
+.focus-carousel {
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* ---- Individual Mode Card ---- */
+.focus-mode-card {
+  /* Slightly narrower than 100% → next card peeks in on the right */
+  flex: 0 0 calc(100% - 3rem);
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding-bottom: 2rem;
+}
+
+.focus-mode-card::-webkit-scrollbar {
+  display: none;
+}
+
+.focus-mode-inner {
+  background-color: var(--color-surface-container);
+  border-radius: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ---- Card Header ---- */
+.focus-mode-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.focus-mode-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.focus-mode-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--color-primary-dim), var(--color-secondary-dim));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.focus-mode-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.focus-effort-badge {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: rgba(163, 166, 255, 0.12);
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+}
+
+/* ---- Task List ---- */
+.focus-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.focus-task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--color-surface-container-low);
+  border-radius: 2rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.focus-task-item:hover {
+  background-color: var(--color-surface-container-high);
+  transform: translateX(4px);
+}
+
+.focus-task-item.completed .focus-task-check {
+  background-color: var(--color-primary-dim);
+  border-color: var(--color-primary-dim);
+}
+
+.focus-task-item.completed .focus-task-check::after {
+  content: '✓';
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.focus-task-check {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-outline-variant);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.focus-task-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.focus-task-name {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-on-surface);
+  margin: 0 0 0.2rem;
+}
+
+.focus-task-desc {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.focus-task-time {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-on-surface-variant);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* ---- Mode Description ---- */
+.focus-mode-description {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+  margin: 0.25rem 0;
+}
+
+/* ---- Action Button ---- */
+.focus-action-btn {
+  width: 100%;
+  padding: 1.1rem;
+  border-radius: 9999px;
+  border: none;
+  background: linear-gradient(135deg, var(--color-primary-dim), var(--color-secondary-dim));
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.focus-action-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+  box-shadow: 0 8px 32px rgba(96, 99, 238, 0.35);
+}
+
+.focus-action-btn:active {
+  transform: translateY(0);
+}
+
+/* ---- Scroll Dots ---- */
+.focus-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-shrink: 0;
+}
+
+.focus-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-outline-variant);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.focus-dot.active {
+  width: 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary-dim), var(--color-secondary-dim));
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .suggestions-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .focus-mode-inner {
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
+}

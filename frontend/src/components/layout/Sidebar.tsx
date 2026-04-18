@@ -23,6 +23,9 @@ const Sidebar: React.FC<SidebarProps> = ({ onOpenBrainDump }) => {
           <Layers size={20} />
           <span>Spaces</span>
         </NavLink>
+        <NavLink to="/suggestions" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <span>Suggestions</span>
+        </NavLink>
         
         {/* Mobile Brain-Dump Button (Hidden on Desktop) */}
         <button className="mobile-brain-dump" onClick={onOpenBrainDump} aria-label="Quick Brain-Dump">
