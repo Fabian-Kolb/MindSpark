@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Productivity Tracker - Luminous Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#767577",
+                        "primary-dim": "#6063ee",
+                        "on-surface": "#f9f5f8",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "error-container": "#a70138",
+                        "surface-container": "#19191c",
+                        "on-primary": "#0f00a4",
+                        "error-dim": "#d73357",
+                        "tertiary": "#ff6daf",
+                        "primary": "#a3a6ff",
+                        "on-tertiary-fixed": "#37001d",
+                        "surface-variant": "#262528",
+                        "secondary": "#ac8aff",
+                        "surface-container-highest": "#262528",
+                        "on-surface-variant": "#adaaad",
+                        "surface-container-high": "#1f1f22",
+                        "error": "#ff6e84",
+                        "secondary-container": "#5516be",
+                        "on-primary-container": "#0a0081",
+                        "inverse-primary": "#494bd7",
+                        "on-error": "#490013",
+                        "on-secondary": "#280067",
+                        "primary-container": "#9396ff",
+                        "primary-fixed-dim": "#8387ff",
+                        "surface-container-low": "#131315",
+                        "secondary-fixed": "#dac9ff",
+                        "on-background": "#f9f5f8",
+                        "primary-fixed": "#9396ff",
+                        "surface-tint": "#a3a6ff",
+                        "inverse-on-surface": "#565457",
+                        "background": "#0e0e10",
+                        "tertiary-fixed-dim": "#ff73b1",
+                        "on-primary-fixed": "#000000",
+                        "on-secondary-container": "#d9c8ff",
+                        "on-tertiary": "#4b002a",
+                        "inverse-surface": "#fcf8fb",
+                        "on-error-container": "#ffb2b9",
+                        "surface": "#0e0e10",
+                        "on-primary-fixed-variant": "#0e009d",
+                        "tertiary-dim": "#ff67ad",
+                        "on-tertiary-container": "#2f0018",
+                        "on-tertiary-fixed-variant": "#740044",
+                        "tertiary-fixed": "#ff8cbc",
+                        "tertiary-container": "#fa53a4",
+                        "on-secondary-fixed": "#40009b",
+                        "on-secondary-fixed-variant": "#5f28c8",
+                        "outline-variant": "#48474a",
+                        "surface-container-lowest": "#000000",
+                        "secondary-dim": "#8455ef",
+                        "surface-dim": "#0e0e10",
+                        "surface-bright": "#2c2c2f",
+                        "chart-coding": "#6063ee",
+                        "chart-uni": "#ac8aff",
+                        "chart-ideas": "#14b8a6",
+                        "chart-life": "#a1a1aa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-gradient-primary {
+            background-image: linear-gradient(135deg, var(--tw-colors-primary-dim), var(--tw-colors-secondary-dim));
+        }
+        .shadow-ambient {
+            box-shadow: 0 0 40px rgba(163, 166, 255, 0.06);
+        }
+        .divider-gradient {
+            background: linear-gradient(90deg, transparent, var(--tw-colors-outline-variant), transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Navigation -->
+<header class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-lg shadow-[0_0_40px_rgba(99,102,241,0.06)] border-none">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto border-none">
+<!-- Brand Logo -->
+<div class="text-xl font-black text-indigo-400 font-headline tracking-tight">
+                Luminous Sanctuary
+            </div>
+<!-- Navigation Links (Web only) -->
+<nav class="hidden md:flex gap-8">
+<a class="text-zinc-500 hover:text-zinc-300 font-manrope tracking-tight hover:bg-zinc-800/50 transition-colors duration-400 px-3 py-1 rounded-md" href="#">Dashboard</a>
+<a class="text-indigo-400 font-bold border-b-2 border-indigo-500/50 pb-1 font-manrope tracking-tight hover:bg-zinc-800/50 transition-colors duration-400 px-3 py-1" href="#">Analytics</a>
+<a class="text-zinc-500 hover:text-zinc-300 font-manrope tracking-tight hover:bg-zinc-800/50 transition-colors duration-400 px-3 py-1 rounded-md" href="#">Focus</a>
+<a class="text-zinc-500 hover:text-zinc-300 font-manrope tracking-tight hover:bg-zinc-800/50 transition-colors duration-400 px-3 py-1 rounded-md" href="#">Settings</a>
+</nav>
+<!-- Trailing Icons & Profile -->
+<div class="flex items-center gap-6">
+<button aria-label="Notifications" class="text-on-surface-variant hover:text-primary transition-colors active:scale-98 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+<button aria-label="Search" class="text-on-surface-variant hover:text-primary transition-colors active:scale-98 transition-transform duration-200 hidden md:block">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/15 active:scale-98 transition-transform duration-200 cursor-pointer shadow-ambient">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close up portrait of a young woman with soft cinematic lighting and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7RsnlQynWTyf26apDhmy-ZTZfn0VomYO5IaiqTkYd3YdG2OkB66EGcGzJLEo5lfQ6dXVh07mkPK0Tru-87XrRfQXWgVy7oanVpecVJLydJEFEtjY9vPdYOhjzmeacn8kaqF2v-Ovste9QM95qvnbGMv7kMcTtGar9MJvAFUwMfXmtTheuCmtdL167eyGqRJxFYB2-x4mYnxNcnX5KddWhMN9Gh79GXGL1xZH7NAIUkgqS19RFpoHrxCieWtQzOAE5SbIWjSpZUY"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
+<!-- Header Section -->
+<section class="space-y-4">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight ml-4">
+                Weekly Rhythm
+            </h1>
+<p class="font-label text-on-surface-variant text-lg max-w-2xl ml-4">
+                A detailed breakdown of your time investment across core focus areas. The glow indicates sustained deep work sessions.
+            </p>
+</section>
+<!-- Main Chart Card -->
+<section class="bg-surface-container rounded-xl p-8 shadow-ambient border border-outline-variant/15 relative overflow-hidden group">
+<!-- Subtle background glow -->
+<div class="absolute -top-32 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none transition-opacity duration-700 opacity-50 group-hover:opacity-100"></div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 relative z-10 gap-6">
+<div>
+<h2 class="font-headline text-2xl font-bold text-on-surface mb-2">Productivity Distribution</h2>
+<div class="text-on-surface-variant font-label text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+                        Oct 24 - Oct 30
+                    </div>
+</div>
+<!-- Legend -->
+<div class="flex flex-wrap gap-4 md:gap-6 bg-surface-container-low px-5 py-3 rounded-lg border border-outline-variant/15">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-chart-coding shadow-[0_0_10px_rgba(96,99,238,0.5)]"></div>
+<span class="font-label text-sm text-on-surface-variant">Coding</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-chart-uni shadow-[0_0_10px_rgba(172,138,255,0.5)]"></div>
+<span class="font-label text-sm text-on-surface-variant">Uni</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-chart-ideas shadow-[0_0_10px_rgba(20,184,166,0.5)]"></div>
+<span class="font-label text-sm text-on-surface-variant">Ideas</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-chart-life"></div>
+<span class="font-label text-sm text-on-surface-variant">Life</span>
+</div>
+</div>
+</div>
+<!-- Segmented Bar Chart Area -->
+<div class="relative h-[400px] w-full flex items-end justify-between pt-10 pb-6 border-b border-outline-variant/20 z-10">
+<!-- Y-Axis Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between pb-6 pointer-events-none">
+<div class="w-full h-px bg-outline-variant/10"></div>
+<div class="w-full h-px bg-outline-variant/10"></div>
+<div class="w-full h-px bg-outline-variant/10"></div>
+<div class="w-full h-px bg-outline-variant/10"></div>
+<div class="w-full h-px bg-outline-variant/10"></div>
+</div>
+<!-- Y-Axis Labels -->
+<div class="absolute left-0 top-0 bottom-6 flex flex-col justify-between text-xs font-label text-on-surface-variant/50 -ml-8 py-2">
+<span>12h</span>
+<span>9h</span>
+<span>6h</span>
+<span>3h</span>
+<span>0h</span>
+</div>
+<!-- Bars Container -->
+<div class="w-full h-full flex justify-around items-end relative z-20 px-2 md:px-8 gap-2 md:gap-4">
+<!-- Day 1: Mon -->
+<div class="flex flex-col items-center group/bar w-full max-w-[48px]">
+<div class="w-full h-[80%] flex flex-col justify-end gap-[1px] transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full bg-chart-ideas rounded-t-sm h-[15%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-uni h-[30%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-coding h-[40%] opacity-90 group-hover/bar:opacity-100 transition-opacity shadow-[0_-5px_15px_rgba(96,99,238,0.2)]"></div>
+<div class="w-full bg-chart-life rounded-b-sm h-[15%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+</div>
+<span class="mt-4 font-label text-sm text-on-surface-variant group-hover/bar:text-primary transition-colors">Mon</span>
+</div>
+<!-- Day 2: Tue -->
+<div class="flex flex-col items-center group/bar w-full max-w-[48px]">
+<div class="w-full h-[65%] flex flex-col justify-end gap-[1px] transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full bg-chart-uni rounded-t-sm h-[40%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-coding h-[20%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-life rounded-b-sm h-[40%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+</div>
+<span class="mt-4 font-label text-sm text-on-surface-variant group-hover/bar:text-primary transition-colors">Tue</span>
+</div>
+<!-- Day 3: Wed -->
+<div class="flex flex-col items-center group/bar w-full max-w-[48px]">
+<div class="w-full h-[90%] flex flex-col justify-end gap-[1px] transition-transform duration-300 hover:-translate-y-1 relative">
+<!-- Glow effect for high productivity day -->
+<div class="absolute inset-0 bg-primary/20 blur-xl rounded-full -z-10 opacity-0 group-hover/bar:opacity-100 transition-opacity duration-500"></div>
+<div class="w-full bg-chart-ideas rounded-t-sm h-[20%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-coding h-[60%] opacity-90 group-hover/bar:opacity-100 transition-opacity shadow-[0_-5px_20px_rgba(96,99,238,0.3)]"></div>
+<div class="w-full bg-chart-life rounded-b-sm h-[20%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+</div>
+<span class="mt-4 font-label text-sm text-on-surface font-semibold group-hover/bar:text-primary transition-colors">Wed</span>
+</div>
+<!-- Day 4: Thu -->
+<div class="flex flex-col items-center group/bar w-full max-w-[48px]">
+<div class="w-full h-[50%] flex flex-col justify-end gap-[1px] transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full bg-chart-uni rounded-t-sm h-[20%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-life rounded-b-sm h-[80%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+</div>
+<span class="mt-4 font-label text-sm text-on-surface-variant group-hover/bar:text-primary transition-colors">Thu</span>
+</div>
+<!-- Day 5: Fri -->
+<div class="flex flex-col items-center group/bar w-full max-w-[48px]">
+<div class="w-full h-[75%] flex flex-col justify-end gap-[1px] transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full bg-chart-ideas rounded-t-sm h-[30%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-uni h-[30%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-coding h-[20%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-life rounded-b-sm h-[20%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+</div>
+<span class="mt-4 font-label text-sm text-on-surface-variant group-hover/bar:text-primary transition-colors">Fri</span>
+</div>
+<!-- Day 6: Sat -->
+<div class="flex flex-col items-center group/bar w-full max-w-[48px]">
+<div class="w-full h-[40%] flex flex-col justify-end gap-[1px] transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full bg-chart-ideas rounded-t-sm h-[40%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+<div class="w-full bg-chart-life rounded-b-sm h-[60%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+</div>
+<span class="mt-4 font-label text-sm text-on-surface-variant group-hover/bar:text-primary transition-colors">Sat</span>
+</div>
+<!-- Day 7: Sun -->
+<div class="flex flex-col items-center group/bar w-full max-w-[48px]">
+<div class="w-full h-[30%] flex flex-col justify-end gap-[1px] transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full bg-chart-life rounded-[2px] h-[100%] opacity-90 group-hover/bar:opacity-100 transition-opacity"></div>
+</div>
+<span class="mt-4 font-label text-sm text-on-surface-variant group-hover/bar:text-primary transition-colors">Sun</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Insights Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Insight Card 1 -->
+<div class="bg-surface-container-low rounded-lg p-6 border border-outline-variant/15 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-chart-coding/20 flex items-center justify-center text-chart-coding">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<h3 class="font-label text-on-surface-variant font-medium">Deep Work Peak</h3>
+</div>
+<p class="font-headline text-3xl font-bold text-on-surface">Wed, 4:00 PM</p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/10">
+<p class="font-label text-sm text-on-surface-variant">Sustained coding block lasted 4.5 hours with high focus scores.</p>
+</div>
+</div>
+<!-- Insight Card 2 -->
+<div class="bg-surface-container rounded-lg p-6 border border-outline-variant/15 flex flex-col justify-between shadow-ambient relative overflow-hidden">
+<!-- Atmospheric accent -->
+<div class="absolute -right-10 -bottom-10 w-32 h-32 bg-secondary/10 rounded-full blur-[40px]"></div>
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<h3 class="font-label text-on-surface-variant font-medium">Uni Allocation</h3>
+</div>
+<div class="flex items-end gap-2">
+<p class="font-headline text-3xl font-bold text-on-surface">18.5h</p>
+<p class="font-label text-sm text-primary mb-1 flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 12%
+                        </p>
+</div>
+</div>
+<div class="mt-6">
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-chart-uni w-[65%] rounded-full shadow-[0_0_10px_rgba(172,138,255,0.4)]"></div>
+</div>
+<p class="font-label text-xs text-on-surface-variant mt-2 text-right">65% of weekly goal</p>
+</div>
+</div>
+<!-- Insight Card 3 -->
+<div class="bg-surface-container-low rounded-lg p-6 border border-outline-variant/15 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-chart-ideas/20 flex items-center justify-center text-chart-ideas">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<h3 class="font-label text-on-surface-variant font-medium">Idea Incubation</h3>
+</div>
+<p class="font-headline text-3xl font-bold text-on-surface">5 Sessions</p>
+</div>
+<div class="mt-6 flex -space-x-2">
+<!-- Abstract representation of sessions -->
+<div class="w-8 h-8 rounded-full bg-chart-ideas/40 border-2 border-surface-container-low flex items-center justify-center backdrop-blur-sm"><span class="material-symbols-outlined text-[12px] text-chart-ideas">star</span></div>
+<div class="w-8 h-8 rounded-full bg-chart-ideas/60 border-2 border-surface-container-low flex items-center justify-center backdrop-blur-sm"><span class="material-symbols-outlined text-[12px] text-surface-container-low icon-fill">star</span></div>
+<div class="w-8 h-8 rounded-full bg-chart-ideas/80 border-2 border-surface-container-low flex items-center justify-center backdrop-blur-sm"><span class="material-symbols-outlined text-[12px] text-surface-container-low icon-fill">star</span></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-surface-container-low flex items-center justify-center"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-surface-container-low flex items-center justify-center"></div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="h-px w-full divider-gradient my-8"></div>
+<!-- Action Area -->
+<section class="flex justify-center pb-12">
+<button class="bg-gradient-primary text-on-primary font-label font-semibold py-3 px-8 rounded-full hover:shadow-[0_0_30px_rgba(163,166,255,0.3)] transition-all duration-300 active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_task</span>
+                Log New Session
+            </button>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-[3rem] bg-zinc-950/90 backdrop-blur-2xl shadow-[0_-8px_30px_rgba(0,0,0,0.5)] border-none">
+<div class="flex justify-around items-center px-6 pb-8 pt-4 w-full">
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-indigo-300 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">insights</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-500/10 text-indigo-400 rounded-full px-5 py-2 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1 icon-fill">history_toggle_off</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Timeline</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-indigo-300 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">folder</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 hover:text-indigo-300 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

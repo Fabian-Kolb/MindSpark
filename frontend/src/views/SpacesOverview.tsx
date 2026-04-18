@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import { GraduationCap, Code, Lightbulb, Coffee, ArrowRight, ListFilter } from 'lucide-react';
 import './SpacesOverview.css';

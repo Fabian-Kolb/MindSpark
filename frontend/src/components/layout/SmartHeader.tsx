@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useLocation } from 'react-router-dom';
 import { Search, Bell, User } from 'lucide-react';
 import './SmartHeader.css';

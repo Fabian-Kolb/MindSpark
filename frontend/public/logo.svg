@@ -1,0 +1,35 @@
+<svg width="180" height="60" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g filter="url(#neon)">
+    <!-- Icon -->
+    <g transform="translate(10, 10) scale(0.4)">
+      <!-- Outer brain/cloud shape -->
+      <path d="M 55 90 C 20 100, 5 70, 15 50 C 5 35, 10 15, 30 15 C 40 5, 60 5, 70 15 C 90 20, 95 40, 85 55 C 90 75, 75 95, 55 90" 
+            stroke="#a3a6ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Center spark line connecting to the tail -->
+      <path d="M 50 50 C 60 55, 65 70, 50 100" 
+            stroke="#a3a6ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            
+      <!-- Spark lines -->
+      <path d="M 50 28 L 50 20" stroke="#a3a6ff" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 35 35 L 25 30" stroke="#a3a6ff" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 33 55 L 23 60" stroke="#a3a6ff" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 65 35 L 75 30" stroke="#a3a6ff" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 67 55 L 77 60" stroke="#a3a6ff" stroke-width="8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Text -->
+    <text x="56" y="42" font-family="'Manrope', 'Inter', system-ui, sans-serif" font-weight="700" font-size="34" fill="#a3a6ff" letter-spacing="-1">Thoxt</text>
+  </g>
+</svg>

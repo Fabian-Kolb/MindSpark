@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './components/layout/AppLayout';
 import DashboardView from './views/DashboardView';

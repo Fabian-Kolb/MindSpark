@@ -14,19 +14,8 @@
   gap: 12px;
   margin-bottom: 48px;
 }
-
 .logo-spark {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  box-shadow: 0 0 12px rgba(163, 166, 255, 0.4);
-}
-
-.sidebar-logo h2 {
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  color: var(--color-on-surface);
+  display: none;
 }
 
 .sidebar-nav {

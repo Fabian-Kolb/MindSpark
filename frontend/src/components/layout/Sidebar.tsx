@@ -11,8 +11,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onOpenBrainDump }) => {
   return (
     <aside className="sidebar">
       <div className="sidebar-logo">
-        <div className="logo-spark"></div>
-        <h2>Thoxt</h2>
+        <img src="/logo.svg" alt="Thoxt Logo" style={{ height: '40px', objectFit: 'contain' }} />
       </div>
 
       <nav className="sidebar-nav">
