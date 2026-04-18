@@ -1,0 +1,231 @@
+.dashboard-grid {
+  display: flex;
+  gap: 48px;
+  width: 100%;
+}
+
+.dashboard-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: -16px;
+  padding-left: 8px;
+}
+
+.mt-6 {
+  margin-top: 24px;
+}
+
+/* Brain Dump */
+.brain-dump-container {
+  background-color: var(--color-surface-container);
+  padding: 32px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.brain-dump-textarea {
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  resize: none;
+  flex-grow: 1;
+  min-height: 200px;
+  outline: none;
+  line-height: 1.6;
+}
+.brain-dump-textarea::placeholder {
+  color: var(--color-surface-variant); /* Adjusted to make it visible but subtle */
+}
+
+.atmospheric-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(72, 71, 74, 0.5), transparent);
+  margin: 24px 0;
+  flex-shrink: 0;
+}
+
+.brain-dump-btn {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+/* Tasks Box */
+.tasks-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 8px;
+}
+.tasks-header h2 {
+  font-size: 1.875rem;
+  color: var(--color-on-surface);
+}
+
+.task-count {
+  background-color: rgba(163, 166, 255, 0.1);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(72, 71, 74, 0.15); /* Ghost border style applied via variables later or directly here depending on rules */
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-card {
+  background-color: var(--color-surface-container-low);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.task-card:hover {
+  background-color: var(--color-surface-container);
+}
+
+.task-checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--color-outline-variant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+  transition: border-color 0.3s;
+}
+.task-card:hover .task-checkbox {
+  border-color: var(--color-primary);
+}
+.task-checkbox svg {
+  color: transparent;
+  width: 16px;
+  height: 16px;
+  transition: color 0.3s;
+}
+.task-card:hover .task-checkbox svg {
+  color: var(--color-primary);
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-title {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-on-surface);
+  line-height: 1.25;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.task-tag {
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface-variant);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.task-time {
+  color: var(--color-outline-variant);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+.task-time svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Motivation */
+.motivation-box {
+  background-color: var(--color-surface-highest);
+  padding: 24px 32px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.motivation-box::after {
+  content: '';
+  position: absolute;
+  right: -32px;
+  top: -32px;
+  width: 128px;
+  height: 128px;
+  background-color: rgba(172, 138, 255, 0.2); 
+  border-radius: 50%;
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.motivation-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-surface-variant);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.motivation-content {
+  z-index: 10;
+}
+.motivation-content h3 {
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+  color: var(--color-on-surface);
+}
+.motivation-content p {
+  color: var(--color-on-surface-variant);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    flex-direction: column;
+  }
+}

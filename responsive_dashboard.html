@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thoxt Focus Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#262528",
+                        "surface-container-low": "#131315",
+                        "surface": "#0e0e10",
+                        "inverse-surface": "#fcf8fb",
+                        "primary-dim": "#6063ee",
+                        "inverse-on-surface": "#565457",
+                        "on-primary": "#0f00a4",
+                        "surface-container-lowest": "#000000",
+                        "primary-fixed-dim": "#8387ff",
+                        "tertiary-dim": "#ff67ad",
+                        "surface-container": "#19191c",
+                        "tertiary-container": "#fa53a4",
+                        "tertiary-fixed": "#ff8cbc",
+                        "on-primary-fixed-variant": "#0e009d",
+                        "error-dim": "#d73357",
+                        "on-secondary-fixed": "#40009b",
+                        "primary-fixed": "#9396ff",
+                        "on-secondary": "#280067",
+                        "surface-container-highest": "#262528",
+                        "primary": "#a3a6ff",
+                        "surface-dim": "#0e0e10",
+                        "tertiary-fixed-dim": "#ff73b1",
+                        "on-primary-container": "#0a0081",
+                        "on-tertiary-container": "#2f0018",
+                        "on-tertiary-fixed": "#37001d",
+                        "secondary-dim": "#8455ef",
+                        "on-surface-variant": "#adaaad",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "secondary": "#ac8aff",
+                        "surface-container-high": "#1f1f22",
+                        "surface-bright": "#2c2c2f",
+                        "inverse-primary": "#494bd7",
+                        "on-error-container": "#ffb2b9",
+                        "background": "#0e0e10",
+                        "on-tertiary": "#4b002a",
+                        "on-secondary-container": "#d9c8ff",
+                        "secondary-fixed": "#dac9ff",
+                        "on-error": "#490013",
+                        "on-primary-fixed": "#000000",
+                        "primary-container": "#9396ff",
+                        "error-container": "#a70138",
+                        "on-background": "#f9f5f8",
+                        "outline": "#767577",
+                        "secondary-container": "#5516be",
+                        "on-surface": "#f9f5f8",
+                        "surface-tint": "#a3a6ff",
+                        "outline-variant": "#48474a",
+                        "on-secondary-fixed-variant": "#5f28c8",
+                        "on-tertiary-fixed-variant": "#740044",
+                        "error": "#ff6e84",
+                        "tertiary": "#ff6daf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(38, 37, 40, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6063ee, #8455ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6063ee, #8455ef);
+        }
+        .ambient-shadow {
+            box-shadow: 0 0 40px 6px rgba(163, 166, 255, 0.06);
+        }
+        .ghost-border {
+            border: 1px solid rgba(72, 71, 74, 0.15);
+        }
+        .atmospheric-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(72, 71, 74, 0.5), transparent);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col antialiased selection:bg-primary-dim selection:text-on-primary">
+<!-- TopAppBar (Web) -->
+<header class="hidden md:flex fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-lg justify-between items-center px-6 py-4 max-w-7xl mx-auto left-0 right-0 shadow-none">
+<div class="text-2xl font-bold text-zinc-100 font-['Manrope'] tracking-tight">Thoxt</div>
+<nav class="flex gap-8 items-center">
+<a class="text-zinc-400 hover:text-indigo-300 transition-colors duration-300 active:scale-95 transition-transform font-['Manrope'] tracking-tight" href="#">Home</a>
+<a class="text-indigo-400 font-semibold hover:text-indigo-300 transition-colors duration-300 active:scale-95 transition-transform font-['Manrope'] tracking-tight" href="#">Focus</a>
+<a class="text-zinc-400 hover:text-indigo-300 transition-colors duration-300 active:scale-95 transition-transform font-['Manrope'] tracking-tight" href="#">Create</a>
+<a class="text-zinc-400 hover:text-indigo-300 transition-colors duration-300 active:scale-95 transition-transform font-['Manrope'] tracking-tight" href="#">Library</a>
+<a class="text-zinc-400 hover:text-indigo-300 transition-colors duration-300 active:scale-95 transition-transform font-['Manrope'] tracking-tight" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-4 text-indigo-400">
+<button class="hover:text-indigo-300 transition-colors duration-300 active:scale-95 transition-transform"><span class="material-symbols-outlined">search</span></button>
+<button class="hover:text-indigo-300 transition-colors duration-300 active:scale-95 transition-transform"><span class="material-symbols-outlined">notifications</span></button>
+<img alt="User avatar" class="w-8 h-8 rounded-full object-cover ghost-border" data-alt="Portrait of a young woman with natural makeup, looking directly at the camera, soft studio lighting, professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvwk8LuWnx3rpayMoecby4ey3u8tsPE4GtQH6kbkiU0Q5iVuofAG6dDW6_iwmcDxhyW7myHAUD7HoCOkOxAF5uJwz8OHEpw1LBaEqUhX_3nHex9V1KReIkrK4C84jBySTikIUetRVeyo3Q8UaCwSTljh-Ac0qdCs4_X5MSjFpbojIH_itJBLSO4Ls0Ki1mdHaUaHkC8k-9t8qqsOt8MJs6L3KrVTiSu9Cr8XBmnHqXGCVC6d0R4Bov50Bv9vYgnCdW1ZoDdAitS9Y"/>
+</div>
+<div class="bg-gradient-to-r from-transparent via-zinc-800/50 to-transparent h-[1px] w-full absolute bottom-0 left-0"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-8 md:pt-32 pb-32 px-4 md:px-8 max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-8 lg:gap-12">
+<!-- Left Column: Brain Dump -->
+<section class="flex-1 flex flex-col gap-6 w-full md:w-1/2">
+<h1 class="font-headline text-3xl md:text-5xl font-bold tracking-tight text-on-surface mb-2 pl-2">Brain-Dump</h1>
+<div class="bg-surface-container rounded-xl p-6 md:p-8 flex-grow flex flex-col ambient-shadow ghost-border relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+<textarea class="bg-transparent border-none text-on-surface text-lg md:text-xl resize-none flex-grow focus:ring-0 placeholder:text-surface-variant font-body leading-relaxed w-full h-48 md:h-full z-10" placeholder="Was schwirrt dir im Kopf herum? Tippe es hier rein und mach den Kopf frei..."></textarea>
+<div class="atmospheric-divider my-6 z-10"></div>
+<button class="gradient-bg text-on-primary rounded-full py-4 px-8 font-label font-semibold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 active:scale-95 transform duration-300 z-10 w-full md:w-auto self-end mt-auto shadow-[0_0_20px_rgba(163,166,255,0.3)]">
+                    Magie wirken lassen ✨
+                </button>
+</div>
+</section>
+<!-- Right Column: Focus Tasks & Motivation -->
+<section class="flex-1 flex flex-col gap-8 w-full md:w-1/2">
+<!-- Tasks List -->
+<div class="flex flex-col gap-6">
+<div class="flex items-end justify-between pl-2">
+<h2 class="font-headline text-2xl md:text-3xl font-semibold text-on-surface">Dein Fokus für jetzt</h2>
+<span class="text-primary font-label text-sm font-medium bg-primary/10 px-3 py-1 rounded-full ghost-border">3 / 3</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Task Card 1 -->
+<div class="bg-surface-container-low rounded-lg p-5 flex items-start gap-4 hover:bg-surface-container transition-colors duration-300 cursor-pointer group">
+<div class="mt-1 flex-shrink-0">
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-transparent group-hover:text-primary transition-colors">check</span>
+</div>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<p class="font-body text-on-surface text-lg font-medium leading-tight">Vorlesungsskript Mathematik Kapitel 4 zusammenfassen</p>
+<div class="flex items-center gap-2">
+<span class="bg-surface-variant text-on-surface-variant text-xs font-label px-2.5 py-1 rounded-md">Uni / Mathe</span>
+<span class="text-outline-variant text-xs font-label flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 45 min</span>
+</div>
+</div>
+</div>
+<!-- Task Card 2 -->
+<div class="bg-surface-container-low rounded-lg p-5 flex items-start gap-4 hover:bg-surface-container transition-colors duration-300 cursor-pointer group">
+<div class="mt-1 flex-shrink-0">
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-transparent group-hover:text-primary transition-colors">check</span>
+</div>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<p class="font-body text-on-surface text-lg font-medium leading-tight">WG-Putzplan für nächsten Monat erstellen</p>
+<div class="flex items-center gap-2">
+<span class="bg-surface-variant text-on-surface-variant text-xs font-label px-2.5 py-1 rounded-md">Life Admin</span>
+</div>
+</div>
+</div>
+<!-- Task Card 3 -->
+<div class="bg-surface-container-low rounded-lg p-5 flex items-start gap-4 hover:bg-surface-container transition-colors duration-300 cursor-pointer group">
+<div class="mt-1 flex-shrink-0">
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-transparent group-hover:text-primary transition-colors">check</span>
+</div>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<p class="font-body text-on-surface text-lg font-medium leading-tight">Literaturrecherche für Seminararbeit beginnen</p>
+<div class="flex items-center gap-2">
+<span class="bg-surface-variant text-on-surface-variant text-xs font-label px-2.5 py-1 rounded-md">Uni / Seminar</span>
+<span class="text-outline-variant text-xs font-label flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 90 min</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Motivation Box -->
+<div class="mt-auto bg-surface-container-highest rounded-xl p-6 md:p-8 ambient-shadow relative overflow-hidden flex items-center gap-6">
+<div class="absolute right-0 top-0 w-32 h-32 bg-secondary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center flex-shrink-0 text-secondary z-10">
+<span class="material-symbols-outlined fill text-2xl">local_fire_department</span>
+</div>
+<div class="z-10">
+<h3 class="font-headline text-lg font-semibold text-on-surface mb-1">Bleib dran!</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed">Du hast diese Woche schon 12 Stunden fokussiert gearbeitet. Noch ein kleiner Push!</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden flex justify-around items-center z-50 bg-zinc-900/60 backdrop-blur-2xl fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-lg rounded-full px-2 py-3 border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5),0_0_15px_rgba(99,102,241,0.1)]">
+<a class="flex flex-col items-center justify-center text-zinc-500 py-2 px-4 hover:bg-white/5 rounded-full transition-all active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Inter'] text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-500/20 text-indigo-300 rounded-full py-2 px-4 hover:bg-white/5 transition-all active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined fill mb-1">lens_blur</span>
+<span class="font-['Inter'] text-[10px] font-medium">Focus</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 py-2 px-4 hover:bg-white/5 rounded-full transition-all active:scale-110 duration-300 ease-out" href="#">
+<div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-on-primary shadow-lg -mt-6 border-4 border-surface">
+<span class="material-symbols-outlined">add</span>
+</div>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Create</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 py-2 px-4 hover:bg-white/5 rounded-full transition-all active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-['Inter'] text-[10px] font-medium">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 py-2 px-4 hover:bg-white/5 rounded-full transition-all active:scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Inter'] text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- FAB Web Equivalent (Floating Action Button for Desktop Create) -->
+<button class="hidden md:flex fixed bottom-12 right-12 w-16 h-16 rounded-full gradient-bg items-center justify-center text-on-primary ambient-shadow hover:scale-105 active:scale-95 transition-transform duration-300 z-40 border border-white/10">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>

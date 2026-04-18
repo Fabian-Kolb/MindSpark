@@ -1,0 +1,104 @@
+.tracker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tracker-top-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stats-box {
+  background-color: var(--color-surface-container-low);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.stats-box:hover {
+  background-color: var(--color-surface-container);
+  transform: translateY(-4px);
+}
+
+.mb-4 { margin-bottom: 16px; }
+.text-4xl { font-size: 2.5rem; letter-spacing: -0.02em; margin-bottom: 8px; color: var(--color-on-surface); }
+.font-display { font-family: var(--font-display); font-weight: 700; }
+
+.stats-box p {
+  color: var(--color-on-surface-variant);
+  font-size: 0.95rem;
+}
+
+.chart-section {
+  background-color: var(--color-surface-container-low);
+  padding: 40px;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--color-on-surface-variant);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.legend-dot.uni, .bar-segment.uni { background-color: var(--color-primary); }
+.legend-dot.work, .bar-segment.work { background-color: #ff6daf; } /* Tertiary */
+.legend-dot.personal, .bar-segment.personal { background-color: var(--color-secondary); }
+
+.chart-placeholder {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.day-label {
+  min-width: 48px;
+  font-weight: 500;
+  color: var(--color-on-surface-variant);
+}
+
+.bar-track {
+  flex-grow: 1;
+  height: 12px;
+  background-color: var(--color-surface-highest);
+  border-radius: 9999px;
+  display: flex;
+  overflow: hidden;
+}
+
+.bar-segment {
+  height: 100%;
+}
+
+.day-total {
+  min-width: 48px;
+  font-weight: 600;
+  text-align: right;
+  font-family: var(--font-display);
+}
+
+@media (max-width: 1024px) {
+  .tracker-top-section {
+    grid-template-columns: 1fr;
+  }
+}

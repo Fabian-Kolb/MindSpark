@@ -1,0 +1,128 @@
+.smart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 48px;
+  background-color: transparent; /* Seamless blend */
+}
+
+.header-titles h1 {
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+  color: var(--color-on-surface);
+  line-height: 1.2;
+}
+
+.header-titles p {
+  color: var(--color-on-surface-variant);
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 9999px;
+  width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 0 0 2px var(--color-primary-dim);
+}
+
+.search-icon {
+  color: var(--color-on-surface-variant);
+  margin-right: 12px;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-on-surface);
+  width: 100%;
+  font-family: var(--font-body);
+}
+
+.search-bar input::placeholder {
+  color: var(--color-on-surface-variant);
+}
+
+.icon-btn {
+  background: var(--color-surface-container);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-surface);
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+.badge {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background-color: var(--color-error-dim);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: bold;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-avatar {
+  background: linear-gradient(135deg, var(--color-surface-highest), var(--color-surface-container));
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .smart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .search-bar {
+    width: auto;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .smart-header {
+    padding: 24px 16px;
+  }
+}

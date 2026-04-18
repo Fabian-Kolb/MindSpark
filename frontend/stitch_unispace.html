@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Uni Space Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#000000",
+                      "surface-container-highest": "#262528",
+                      "surface-bright": "#2c2c2f",
+                      "inverse-surface": "#fcf8fb",
+                      "tertiary-container": "#fa53a4",
+                      "surface-container": "#19191c",
+                      "error-container": "#a70138",
+                      "on-error": "#490013",
+                      "secondary-container": "#5516be",
+                      "on-secondary-fixed-variant": "#5f28c8",
+                      "secondary": "#ac8aff",
+                      "secondary-fixed": "#dac9ff",
+                      "outline-variant": "#48474a",
+                      "error-dim": "#d73357",
+                      "primary-dim": "#6063ee",
+                      "inverse-on-surface": "#565457",
+                      "surface-container-high": "#1f1f22",
+                      "on-secondary": "#280067",
+                      "on-background": "#f9f5f8",
+                      "surface-tint": "#a3a6ff",
+                      "on-primary": "#0f00a4",
+                      "inverse-primary": "#494bd7",
+                      "error": "#ff6e84",
+                      "on-primary-fixed-variant": "#0e009d",
+                      "secondary-fixed-dim": "#ceb9ff",
+                      "on-tertiary-fixed": "#37001d",
+                      "primary-fixed-dim": "#8387ff",
+                      "primary-fixed": "#9396ff",
+                      "on-primary-container": "#0a0081",
+                      "outline": "#767577",
+                      "on-secondary-container": "#d9c8ff",
+                      "tertiary-dim": "#ff67ad",
+                      "surface-container-low": "#131315",
+                      "on-tertiary-fixed-variant": "#740044",
+                      "on-secondary-fixed": "#40009b",
+                      "surface-variant": "#262528",
+                      "secondary-dim": "#8455ef",
+                      "on-surface-variant": "#adaaad",
+                      "primary-container": "#9396ff",
+                      "primary": "#a3a6ff",
+                      "tertiary-fixed": "#ff8cbc",
+                      "tertiary-fixed-dim": "#ff73b1",
+                      "surface-dim": "#0e0e10",
+                      "on-tertiary": "#4b002a",
+                      "surface": "#0e0e10",
+                      "on-error-container": "#ffb2b9",
+                      "tertiary": "#ff6daf",
+                      "background": "#0e0e10",
+                      "on-tertiary-container": "#2f0018",
+                      "on-surface": "#f9f5f8",
+                      "on-primary-fixed": "#000000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Manrope"
+                      ],
+                      "body": [
+                              "Inter"
+                      ],
+                      "label": [
+                              "Inter"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen selection:bg-primary-dim selection:text-white antialiased">
+<!-- TopAppBar -->
+<nav class="w-full sticky top-0 z-50 bg-zinc-950/60 backdrop-blur-xl bg-zinc-900/50 shadow-[0_8px_30px_rgb(99,102,241,0.04)]">
+<div class="flex items-center justify-between px-8 py-4 max-w-[1920px] mx-auto">
+<!-- Brand -->
+<div class="flex items-center space-x-3 w-48">
+<span class="text-2xl font-bold tracking-tighter text-white font-manrope">Uni Space</span>
+</div>
+<!-- Navigation Links -->
+<div class="hidden md:flex flex-1 justify-center items-center space-x-8 font-manrope text-sm font-medium tracking-wide">
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors duration-300" href="#">Focus</a>
+<a class="text-indigo-400 border-b-2 border-indigo-500/50 pb-1" href="#">Spaces</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors duration-300" href="#">Tracker</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center justify-end space-x-4 w-48">
+<button class="text-on-surface-variant hover:text-on-surface hover:bg-zinc-800/50 rounded-full transition-all duration-300 p-2 active:scale-95 transform transition-transform">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface hover:bg-zinc-800/50 rounded-full transition-all duration-300 p-2 active:scale-95 transform transition-transform">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-surface-container-highest border border-outline-variant/15 overflow-hidden flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-primary/50 transition-all">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Portrait of a young person with dark hair smiling gently, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5-V02JYD5KudJqzT-28a7bqAUnSdfnGDyoYChDFh0-i0xjgx7tEi-R3e4D2V53stJT9RCLRmW2lisM1tDyiev0DLW1OJkJLxS_zvAu1C09PnrKa2buBklIYkEhx9PaTl78jDuYXUGScziTy6sOw8waHI9zS99pPaqJeGdSFXdF-sGbTqClbY_JDPqZLRTmZbNXVvBIS70AImgsOnIQnORABRvEdIB6gOqXHoXgPhGsf6aP9WYN_G8_dfRD-HfJ0jlvZUpSG_65fg"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-[1400px] mx-auto px-8 py-8 md:py-16">
+<!-- Large Search Bar -->
+<div class="max-w-3xl mx-auto mb-16 relative group">
+<span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-on-surface-variant text-2xl group-focus-within:text-indigo-400 transition-colors" data-icon="search">search</span>
+<input class="w-full bg-zinc-900/80 rounded-2xl py-4 pl-16 pr-6 text-lg font-body text-on-surface placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:shadow-[0_0_25px_rgba(99,102,241,0.15)] border border-white/5 transition-all duration-300" placeholder="Search spaces, notes..." type="text"/>
+</div>
+<!-- Header Section -->
+<div class="mb-16">
+<div class="flex items-center space-x-6 mb-6">
+<button class="h-12 w-12 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-bright transition-all group">
+<span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tighter text-on-surface">Uni</h1>
+</div>
+<p class="text-lg md:text-xl font-body text-on-surface-variant max-w-2xl ml-16 leading-relaxed">
+                Academic Sanctuary. Focus on your studies and track your progress.
+            </p>
+</div>
+<!-- Sub Navigation Tabs -->
+<div class="flex space-x-2 mb-12 ml-16 overflow-x-auto pb-4 scrollbar-hide">
+<button class="px-6 py-3 rounded-full bg-secondary-container text-secondary font-medium font-body text-sm whitespace-nowrap shadow-[0_0_30px_rgba(85,22,190,0.15)]">
+                Aufgaben
+            </button>
+<button class="px-6 py-3 rounded-full bg-surface-variant text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-colors font-medium font-body text-sm whitespace-nowrap">
+                Notizen
+            </button>
+<button class="px-6 py-3 rounded-full bg-surface-variant text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-colors font-medium font-body text-sm whitespace-nowrap">
+                Lern-Tracker
+            </button>
+</div>
+<!-- Content Grid (Aufgaben Tab) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ml-0 md:ml-16">
+<!-- Card 1: Mathe -->
+<div class="bg-surface-container rounded-xl p-8 relative overflow-hidden group cursor-pointer border border-outline-variant/15 hover:border-primary/30 transition-all duration-500 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(163,166,255,0.06)]">
+<div class="absolute top-0 right-0 w-48 h-48 bg-primary-dim/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary-dim/20 transition-all duration-700"></div>
+<div class="flex justify-between items-start mb-12 relative z-10">
+<div class="h-14 w-14 rounded-full bg-surface-container-highest flex items-center justify-center text-primary border border-outline-variant/15 shadow-inner">
+<span class="material-symbols-outlined text-3xl" data-icon="functions">functions</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-headline font-bold mb-2">Mathe</h3>
+<p class="text-on-surface-variant font-body text-sm mb-6 flex items-center">
+<span class="w-2 h-2 rounded-full bg-error-dim mr-2 animate-pulse"></span>
+                        2 Aufgaben offen
+                    </p>
+</div>
+<div class="mt-4 pt-6 border-t border-gradient-to-r from-transparent via-outline-variant/30 to-transparent relative z-10">
+<div class="flex items-center justify-between text-xs font-body text-on-surface-variant">
+<span>Last updated 2h ago</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Informatik -->
+<div class="bg-surface-container rounded-xl p-8 relative overflow-hidden group cursor-pointer border border-outline-variant/15 hover:border-secondary/30 transition-all duration-500 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgba(172,138,255,0.06)]">
+<div class="absolute top-0 right-0 w-48 h-48 bg-secondary-dim/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-secondary-dim/20 transition-all duration-700"></div>
+<div class="flex justify-between items-start mb-12 relative z-10">
+<div class="h-14 w-14 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary border border-outline-variant/15 shadow-inner">
+<span class="material-symbols-outlined text-3xl" data-icon="code">code</span>
+</div>
+<button class="text-on-surface-variant hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-headline font-bold mb-2">Informatik</h3>
+<p class="text-on-surface-variant font-body text-sm mb-6 flex items-center">
+<span class="w-2 h-2 rounded-full bg-primary mr-2"></span>
+                        5 Aufgaben offen
+                    </p>
+</div>
+<div class="mt-4 pt-6 border-t border-gradient-to-r from-transparent via-outline-variant/30 to-transparent relative z-10">
+<div class="flex items-center justify-between text-xs font-body text-on-surface-variant">
+<span>Last updated 1d ago</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Add New Sub-Space Card -->
+<div class="bg-surface-container-low rounded-xl p-8 relative overflow-hidden group cursor-pointer border border-dashed border-outline-variant/30 hover:border-primary/50 transition-all duration-500 flex flex-col items-center justify-center min-h-[300px]">
+<div class="h-16 w-16 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant group-hover:text-primary group-hover:bg-primary-dim/10 transition-all duration-300 mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="add">add</span>
+</div>
+<h3 class="text-lg font-headline font-semibold text-on-surface-variant group-hover:text-on-surface transition-colors">Add Sub-Space</h3>
+</div>
+</div>
+</main>
+</body></html>

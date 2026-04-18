@@ -1,0 +1,81 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Glass styling from standard classes handles the backdrop blur and bg */
+}
+
+.modal-container {
+  background-color: var(--color-surface-container-high);
+  width: 90%;
+  max-width: 600px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--color-outline-variant);
+  animation: modal-enter 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.dump-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dump-input {
+  background-color: var(--color-surface-container-low);
+  border: 1px solid transparent;
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  padding: 16px;
+  border-radius: 12px;
+  min-height: 150px;
+  resize: none;
+  transition: border-color 0.2s;
+}
+
+.dump-input:focus {
+  outline: none;
+  border-color: var(--color-primary-dim);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.info-text {
+  font-size: 0.85rem;
+  color: var(--color-on-surface-variant);
+}
