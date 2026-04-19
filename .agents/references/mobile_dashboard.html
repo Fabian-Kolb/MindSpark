@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="dark" lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Thoxt ⚡️ - Focus Dashboard</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#a3a6ff",
+                        secondary: "#ac8aff",
+                        background: "#0e0e10",
+                        surface: "#0e0e10",
+                        "surface-container-low": "#131315",
+                        "surface-container": "#19191c",
+                        "surface-variant": "#262528",
+                        "on-surface": "#f9f5f8",
+                        "on-surface-variant": "#adaaad",
+                        "primary-dim": "#6063ee",
+                        "secondary-dim": "#8455ef",
+                        "on-primary": "#0f00a4",
+                    },
+                    borderRadius: {
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Manrope", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        label: ["Inter", "sans-serif"]
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                },
+            },
+        }
+    </script>
+
+    <!-- Custom Utilities -->
+    <style>
+        body {
+            background-color: #0e0e10;
+            color: #f9f5f8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Boundary Rule: No 1px borders. Use tonal depth. */
+        .glass {
+            background: rgba(38, 37, 40, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .glow-primary {
+            box-shadow: 0 0 40px rgba(163, 166, 255, 0.06);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #a3a6ff, #ac8aff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6063ee, #8455ef);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Adjustments for Material Symbols */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+
+<body class="font-body min-h-screen flex flex-col relative pb-32">
+    <!-- TopAppBar -->
+    <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-xl">
+        <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+            <h1 class="font-headline tracking-tight text-2xl font-extrabold gradient-text">Thoxt ⚡️</h1>
+            <button
+                class="text-on-surface-variant hover:text-primary transition-all p-2 rounded-full hover:bg-surface-container active:scale-95">
+                <span class="material-symbols-outlined">person</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col gap-8 px-6 pt-8 max-w-3xl mx-auto w-full">
+        <!-- Section 1: Omni-Input (Brain Dump) -->
+        <section class="bg-surface-container rounded-xl p-8 glow-primary relative overflow-hidden group">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none opacity-50">
+            </div>
+            <div class="relative z-10 flex flex-col gap-6">
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-4xl mt-1">auto_awesome</span>
+                    <textarea
+                        class="w-full bg-transparent border-none text-on-surface font-headline text-2xl md:text-3xl placeholder-on-surface-variant/30 focus:ring-0 resize-none h-32 p-0 leading-tight"
+                        placeholder="Was schwirrt dir im Kopf herum?"></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <button
+                        class="btn-primary py-4 px-8 rounded-full flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(163,166,255,0.2)]">
+                        Magie wirken lassen ✨
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Current Focus -->
+        <section class="flex flex-col gap-6 mt-4">
+            <h2 class="font-headline text-2xl font-bold text-on-surface">Dein Fokus für jetzt</h2>
+            <div class="flex flex-col gap-3">
+                <!-- Task Card 1 -->
+                <div
+                    class="bg-surface-container-low rounded-lg p-5 flex items-center gap-5 hover:bg-surface-container transition-all cursor-pointer group">
+                    <div
+                        class="w-6 h-6 rounded-full border-2 border-on-surface-variant/20 group-hover:border-primary transition-colors flex items-center justify-center">
+                    </div>
+                    <div class="flex-grow">
+                        <p class="font-body text-lg text-on-surface group-hover:text-primary transition-colors">Lineare
+                            Algebra Übungsblatt 4 abschließen</p>
+                    </div>
+                    <span
+                        class="bg-surface-variant/50 text-on-surface-variant text-xs font-label px-3 py-1.5 rounded-full whitespace-nowrap">Uni
+                        / Mathe</span>
+                </div>
+
+                <!-- Task Card 2 -->
+                <div
+                    class="bg-surface-container-low rounded-lg p-5 flex items-center gap-5 hover:bg-surface-container transition-all cursor-pointer group">
+                    <div
+                        class="w-6 h-6 rounded-full border-2 border-on-surface-variant/20 group-hover:border-primary transition-colors flex items-center justify-center">
+                    </div>
+                    <div class="flex-grow">
+                        <p class="font-body text-lg text-on-surface group-hover:text-primary transition-colors">
+                            WG-Putzplan aktualisieren</p>
+                    </div>
+                    <span
+                        class="bg-surface-variant/50 text-on-surface-variant text-xs font-label px-3 py-1.5 rounded-full whitespace-nowrap">Haushalt</span>
+                </div>
+
+                <!-- Task Card 3 -->
+                <div
+                    class="bg-surface-container-low rounded-lg p-5 flex items-center gap-5 hover:bg-surface-container transition-all cursor-pointer group">
+                    <div
+                        class="w-6 h-6 rounded-full border-2 border-on-surface-variant/20 group-hover:border-primary transition-colors flex items-center justify-center">
+                    </div>
+                    <div class="flex-grow">
+                        <p class="font-body text-lg text-on-surface group-hover:text-primary transition-colors">E-Mail
+                            an Prof. Schmidt wg. Sprechstunde</p>
+                    </div>
+                    <span
+                        class="bg-surface-variant/50 text-on-surface-variant text-xs font-label px-3 py-1.5 rounded-full whitespace-nowrap">Wichtig</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Motivation Box -->
+        <section class="mt-4 bg-surface-container rounded-xl p-6 flex items-center gap-4 glow-primary">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-2xl fill-1">local_fire_department</span>
+            </div>
+            <div>
+                <h3 class="font-headline text-xl font-bold text-on-surface">Klasse Start heute!</h3>
+                <p class="font-body text-on-surface-variant mt-1 text-sm">Du hast bereits 2 Aufgaben erledigt. Bleib
+                    dran!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav
+        class="md:hidden glass fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-md rounded-full px-6 py-3 z-50 flex justify-around items-center glow-primary">
+        <!-- Focus -->
+        <a class="flex flex-col items-center justify-center text-primary transition-all duration-300 active:scale-90"
+            href="#">
+            <span class="material-symbols-outlined fill-1">target</span>
+            <span class="font-headline text-[10px] font-bold tracking-wider uppercase mt-1">Focus</span>
+        </a>
+
+        <!-- Spaces -->
+        <a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary transition-all duration-300 active:scale-90"
+            href="#">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span class="font-headline text-[10px] font-bold tracking-wider uppercase mt-1">Spaces</span>
+        </a>
+
+        <!-- Brain-Dump Center Action -->
+        <a class="relative -mt-12 flex flex-col items-center group" href="#">
+            <div
+                class="btn-primary rounded-full p-4 shadow-[0_0_25px_rgba(163,166,255,0.4)] transition-all group-hover:scale-110 active:scale-95 animate-pulse-slow">
+                <span class="material-symbols-outlined text-3xl font-bold fill-1">add</span>
+            </div>
+            <span class="sr-only">Brain-Dump</span>
+        </a>
+
+        <!-- Tracker -->
+        <a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary transition-all duration-300 active:scale-90"
+            href="#">
+            <span class="material-symbols-outlined">monitoring</span>
+            <span class="font-headline text-[10px] font-bold tracking-wider uppercase mt-1">Tracker</span>
+        </a>
+
+        <!-- Profile -->
+        <a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary transition-all duration-300 active:scale-90"
+            href="#">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-headline text-[10px] font-bold tracking-wider uppercase mt-1">Me</span>
+        </a>
+    </nav>
+</body>
+
+</html>
