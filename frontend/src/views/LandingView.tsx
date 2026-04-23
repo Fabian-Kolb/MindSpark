@@ -13,7 +13,7 @@ const LandingView: React.FC = () => {
           Mind<img src={boltIcon} alt="bolt" className="w-8 h-8 mx-0.5 object-contain" />Spark
         </div>
         <div className="flex items-center space-x-4">
-          <Link to="/dashboard" className="text-[#92C421] font-semibold px-6 py-2 bg-[#131315] hover:bg-[#19191c] rounded-2xl transition-all scale-95 active:scale-90">
+          <Link to="/login" className="text-[#92C421] font-semibold px-6 py-2 bg-[#131315] hover:bg-[#19191c] rounded-2xl transition-all scale-95 active:scale-90">
             Login
           </Link>
         </div>
@@ -25,30 +25,31 @@ const LandingView: React.FC = () => {
         {/* Hero Section - Full Width Background */}
         <section className="flex flex-col items-center min-h-[716px] relative pt-0 gap-8 w-full">
           <div className="w-full overflow-hidden pointer-events-none z-0 mb-0 relative">
-            <div className="animate-marquee text-[18vw] font-black uppercase tracking-tighter text-[#1a1a1a] select-none leading-none flex">
-              <span className="pr-20 flex items-center">
-                MIND<img src={boltIcon} alt="" className="h-[0.8em] w-auto mx-[-0.02em] grayscale contrast-0 brightness-[0.1]" />SPARK
+            <div className="animate-marquee text-[18vw] font-black uppercase tracking-tighter text-[#1a1a1a] select-none leading-none flex whitespace-nowrap">
+              <span className="pr-[15vw] flex items-center flex-shrink-0">
+                MIND<img src={boltIcon} alt="" className="h-[0.8em] w-auto ml-[0.15em] mr-[0.05em] grayscale brightness-0 invert-[0.1]" />SPARK
               </span>
-              <span className="pr-20 flex items-center">
-                MIND<img src={boltIcon} alt="" className="h-[0.8em] w-auto mx-[-0.02em] grayscale contrast-0 brightness-[0.1]" />SPARK
+              <span className="pr-[15vw] flex items-center flex-shrink-0">
+                MIND<img src={boltIcon} alt="" className="h-[0.8em] w-auto ml-[0.15em] mr-[0.05em] grayscale brightness-0 invert-[0.1]" />SPARK
               </span>
             </div>
           </div>
           
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#0E3300,_#000000)] -z-10 rounded-full blur-3xl w-3/4 h-3/4 mx-auto mt-20"></div>
           
-          <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center relative z-40 mt-4 md:mt-8">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#f9f5f8] mb-6 leading-[1.1] relative z-10 max-w-5xl mx-auto">
-              Cultivate your thoughts. <span className="text-[#92C421]">Watch them grow.</span>
+          <div className="w-full px-6 md:px-12 lg:px-24 flex flex-col items-start text-left relative z-40 mt-4 md:mt-8">
+            <h1 className="text-5xl md:text-7xl lg:text-[clamp(4rem,9vw,8.5rem)] font-extrabold tracking-tighter text-[#f9f5f8] mb-6 leading-[0.9] relative z-10 w-full">
+              <span className="block">Cultivate your thoughts.</span>
+              <span className="block text-[#92C421]">Watch them grow.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#adaaad] max-w-lg mb-12 font-medium relative z-10 mx-auto bg-[#080808] rounded-2xl p-4">
+            <p className="text-lg md:text-xl lg:text-2xl text-[#adaaad] max-w-2xl mb-10 font-medium relative z-10 leading-relaxed">
               MindSpark is a high-fidelity, AI-powered Second Brain for rapid idea capture and spatial organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 relative z-20 justify-center">
-              <Link to="/dashboard" className="cta-gradient text-[#002109] font-bold px-8 py-4 rounded-2xl text-lg tracking-wide hover:shadow-[0_10px_30px_rgba(146,196,33,0.2)] transition-all transform hover:-translate-y-1 whitespace-nowrap">
+            <div className="flex flex-col sm:flex-row gap-6 relative z-20 justify-start w-full">
+              <Link to="/dashboard" className="cta-gradient text-[#002109] font-bold px-10 py-5 rounded-2xl text-xl tracking-wide hover:shadow-[0_20px_40px_rgba(146,196,33,0.3)] transition-all transform hover:-translate-y-1 whitespace-nowrap text-center">
                 Start Your Garden
               </Link>
-              <button className="bg-[#19191c] text-[#92C421] font-bold px-8 py-4 rounded-2xl text-lg tracking-wide hover:bg-[#1f1f22] transition-colors whitespace-nowrap">
+              <button className="bg-[#131315] text-[#92C421] font-bold px-10 py-5 rounded-2xl text-xl tracking-wide hover:bg-[#19191c] transition-colors whitespace-nowrap">
                 View Documentation
               </button>
             </div>
@@ -58,7 +59,7 @@ const LandingView: React.FC = () => {
           <div className="absolute left-1/2 top-4 md:top-12 -translate-x-1/2 w-full max-w-6xl flex justify-center pointer-events-none z-20">
             <img 
               alt="A lush bonsai tree symbolizing organic growth and organization" 
-              className="object-contain h-[800px] md:h-[1200px] lg:h-[1500px] w-auto drop-shadow-[0_24px_48px_rgba(0,0,0,0.8)] mix-blend-normal" 
+              className="object-contain h-[800px] md:h-[1200px] lg:h-[1500px] w-auto drop-shadow-[0_24px_48px_rgba(0,0,0,0.8)] mix-blend-normal opacity-90" 
               src={heroBonsai} 
             />
           </div>

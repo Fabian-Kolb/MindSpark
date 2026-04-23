@@ -11,7 +11,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onOpenBrainDump }) => {
   return (
     <aside className="sidebar">
       <div className="sidebar-logo">
-        <div className="brand-name" style={{ color: 'var(--color-primary)', fontWeight: 800, fontSize: '1.2rem' }}>MindSpark</div>
+        <div className="brand-name" style={{ color: 'var(--color-primary)', fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.02em' }}>MindSpark</div>
       </div>
 
       <nav className="sidebar-nav">

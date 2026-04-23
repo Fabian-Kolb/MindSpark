@@ -6,6 +6,7 @@ import SpaceDetailView from './views/SpaceDetailView';
 import TrackerView from './views/TrackerView';
 import SuggestionsView from './views/SuggestionsView';
 import LandingView from './views/LandingView';
+import LoginView from './views/LoginView';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingView />} />
+        <Route path="/login" element={<LoginView />} />
         <Route path="/dashboard" element={<AppLayout />}>
           <Route index element={<DashboardView />} />
           <Route path="spaces" element={<SpacesOverview />} />

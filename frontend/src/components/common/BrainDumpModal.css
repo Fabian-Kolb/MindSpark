@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Glass styling from standard classes handles the backdrop blur and bg */
+  background-color: rgba(0, 0, 0, 0.85); /* Solid high-contrast overlay */
 }
 
 .modal-container {
@@ -16,8 +16,7 @@
   width: 90%;
   max-width: 600px;
   padding: 32px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border: 1px solid var(--color-outline-variant);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
   animation: modal-enter 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

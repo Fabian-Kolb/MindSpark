@@ -28,14 +28,15 @@
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  border-radius: var(--color-surface-container);
+  gap: 16px;
+  padding: 16px;
   color: var(--color-on-surface-variant);
   text-decoration: none;
-  font-weight: 500;
-  border-radius: 12px; /* rounded-md basically */
+  font-family: var(--font-family);
+  font-weight: 600;
+  border-radius: 12px;
   transition: all 0.3s ease;
+  justify-content: flex-start;
 }
 
 .nav-item:hover {
@@ -81,11 +82,9 @@
     flex-direction: row;
     padding: 12px 24px;
     border-radius: 9999px;
-    background: rgba(24, 24, 27, 0.6);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    background-color: var(--color-surface-container);
     z-index: 50;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(163,166,255,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
   }
   
   .sidebar-logo {
@@ -115,7 +114,6 @@
 
   .nav-item.active {
     color: var(--color-primary);
-    filter: drop-shadow(0 0 8px rgba(163,166,255,0.6));
   }
 
   .nav-item span {

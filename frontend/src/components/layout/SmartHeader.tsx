@@ -1,6 +1,6 @@
 
 import { useLocation } from 'react-router-dom';
-import { Search, Bell, User } from 'lucide-react';
+import { Search, Bell, User, Settings } from 'lucide-react';
 import './SmartHeader.css';
 
 const SmartHeader = () => {
@@ -32,14 +32,16 @@ const SmartHeader = () => {
       </div>
 
       <div className="header-actions">
-        <div className="search-bar glass">
+        <div className="search-bar">
           <Search size={18} className="search-icon" />
           <input type="text" placeholder="Search spaces, tasks, dumps..." />
         </div>
-        
-        <button className="icon-btn ghost-border">
+
+        <button className="icon-btn">
           <Bell size={20} />
-          <span className="badge">2</span>
+        </button>
+        <button className="icon-btn">
+          <Settings size={20} />
         </button>
 
         <div className="user-avatar">

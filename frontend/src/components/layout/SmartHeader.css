@@ -29,13 +29,14 @@
   display: flex;
   align-items: center;
   padding: 10px 16px;
-  border-radius: 9999px;
+  background-color: var(--color-surface-container);
+  border-radius: 12px;
   width: 300px;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .search-bar:focus-within {
-  box-shadow: 0 0 0 2px var(--color-primary-dim);
+  background-color: var(--color-surface-container-high);
 }
 
 .search-icon {
@@ -91,8 +92,7 @@
 }
 
 .user-avatar {
-  background: linear-gradient(135deg, var(--color-surface-highest), var(--color-surface-container));
-  border: 1px solid var(--color-outline-variant);
+  background: var(--color-surface-container);
   border-radius: 50%;
   width: 44px;
   height: 44px;

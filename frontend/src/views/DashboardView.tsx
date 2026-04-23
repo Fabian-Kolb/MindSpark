@@ -7,16 +7,17 @@ const DashboardView = () => {
     <div className="dashboard-grid">
       {/* Left Column: Brain Dump */}
       <section className="dashboard-col">
-        <h1 className="font-headline page-title text-on-surface">Brain-Dump</h1>
-        <div className="brain-dump-container rounded-xl glow-primary ghost-border">
+        <h1 className="page-title text-[#e5e1e4]">Brain-Dump</h1>
+        <div className="brain-dump-container rounded-md surface-mid">
           <textarea 
             className="brain-dump-textarea" 
             placeholder="Was schwirrt dir im Kopf herum? Tippe es hier rein und mach den Kopf frei..."
           ></textarea>
-          <div className="atmospheric-divider"></div>
-          <button className="btn-primary brain-dump-btn glow-primary">
-            Magie wirken lassen <Sparkles size={20} />
-          </button>
+          <div className="flex justify-end mt-8">
+            <button className="btn-primary brain-dump-btn">
+              Magie wirken lassen <Sparkles size={20} />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -24,12 +25,12 @@ const DashboardView = () => {
       <section className="dashboard-col">
         <div className="tasks-section">
           <div className="tasks-header">
-            <h2>Dein Fokus für jetzt</h2>
-            <span className="task-count ghost-border">3 / 3</span>
+            <h2 className="text-left">Dein Fokus für jetzt</h2>
+            <span className="task-count">3 / 3</span>
           </div>
           <div className="task-list mt-6">
             {/* Task 1 */}
-            <div className="task-card rounded-lg">
+            <div className="task-card rounded-md surface-low">
               <div className="task-checkbox">
                 <Check strokeWidth={3} />
               </div>
@@ -43,7 +44,7 @@ const DashboardView = () => {
             </div>
             
             {/* Task 2 */}
-            <div className="task-card rounded-lg">
+            <div className="task-card rounded-md surface-low">
               <div className="task-checkbox">
                 <Check strokeWidth={3} />
               </div>
@@ -56,7 +57,7 @@ const DashboardView = () => {
             </div>
 
             {/* Task 3 */}
-            <div className="task-card rounded-lg">
+            <div className="task-card rounded-md surface-low">
               <div className="task-checkbox">
                 <Check strokeWidth={3} />
               </div>
@@ -72,7 +73,7 @@ const DashboardView = () => {
         </div>
 
         {/* Motivation Box */}
-        <div className="motivation-box rounded-xl glow-primary">
+        <div className="motivation-box rounded-md surface-highest">
           <div className="motivation-icon">
             <Flame size={24} />
           </div>

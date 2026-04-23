@@ -22,7 +22,7 @@ const BrainDumpModal: React.FC<BrainDumpModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="modal-overlay glass">
+    <div className="modal-overlay" onClick={onClose}>
       <div className="modal-container rounded-lg">
         <div className="modal-header">
           <h3>Quick Brain-Dump</h3>

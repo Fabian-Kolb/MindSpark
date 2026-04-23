@@ -13,8 +13,10 @@
 
 .page-title {
   font-size: 2.5rem;
+  letter-spacing: -0.02em;
   margin-bottom: -16px;
   padding-left: 8px;
+  font-weight: 800;
 }
 
 .mt-6 {
@@ -23,7 +25,6 @@
 
 /* Brain Dump */
 .brain-dump-container {
-  background-color: var(--color-surface-container);
   padding: 32px;
   flex-grow: 1;
   display: flex;
@@ -49,12 +50,6 @@
   color: var(--color-surface-variant); /* Adjusted to make it visible but subtle */
 }
 
-.atmospheric-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(72, 71, 74, 0.5), transparent);
-  margin: 24px 0;
-  flex-shrink: 0;
-}
 
 .brain-dump-btn {
   align-self: flex-end;
@@ -79,14 +74,13 @@
 }
 
 .task-count {
-  background-color: rgba(163, 166, 255, 0.1);
+  background-color: var(--color-surface-container-high);
   color: var(--color-primary);
-  font-family: var(--font-body);
+  font-family: var(--font-family);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 700;
   padding: 4px 12px;
   border-radius: 9999px;
-  border: 1px solid rgba(72, 71, 74, 0.15); /* Ghost border style applied via variables later or directly here depending on rules */
 }
 
 .task-list {
@@ -96,7 +90,6 @@
 }
 
 .task-card {
-  background-color: var(--color-surface-container-low);
   padding: 20px;
   display: flex;
   align-items: flex-start;
@@ -175,7 +168,6 @@
 
 /* Motivation */
 .motivation-box {
-  background-color: var(--color-surface-highest);
   padding: 24px 32px;
   margin-top: auto;
   display: flex;
