@@ -11,19 +11,20 @@ const Sidebar: React.FC<SidebarProps> = ({ onOpenBrainDump }) => {
   return (
     <aside className="sidebar">
       <div className="sidebar-logo">
-        <img src="/logo.svg" alt="Thoxt Logo" style={{ height: '40px', objectFit: 'contain' }} />
+        <div className="brand-name" style={{ color: 'var(--color-primary)', fontWeight: 800, fontSize: '1.2rem' }}>MindSpark</div>
       </div>
 
       <nav className="sidebar-nav">
-        <NavLink to="/" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`} end>
+        <NavLink to="/dashboard" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`} end>
           <LayoutDashboard size={20} />
           <span>Focus</span>
         </NavLink>
-        <NavLink to="/spaces" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+        <NavLink to="/dashboard/spaces" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <Layers size={20} />
           <span>Spaces</span>
         </NavLink>
-        <NavLink to="/suggestions" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+        <NavLink to="/dashboard/suggestions" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+          <Lightbulb size={20} />
           <span>Suggestions</span>
         </NavLink>
         
@@ -35,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onOpenBrainDump }) => {
           <span className="sr-only">Brain-Dump</span>
         </button>
 
-        <NavLink to="/tracker" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+        <NavLink to="/dashboard/tracker" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <BarChart2 size={20} />
           <span>Tracker</span>
         </NavLink>

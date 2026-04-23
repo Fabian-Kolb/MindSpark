@@ -1,12 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="de" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thoxt</title>
+    <title>MindSpark - Cultivating digital intelligence</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CDN for Landing Page -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4be277",
+              "primary-fixed": "#6bff8f",
+              "on-primary": "#003915",
+              "surface": "#131315",
+              "on-surface": "#e5e1e4",
+              "on-surface-variant": "#bccbb9",
+              "surface-container": "#201f22",
+              "surface-container-low": "#1c1b1d",
+              "surface-container-high": "#2a2a2c",
+              "surface-container-highest": "#353437",
+              "surface-container-lowest": "#0e0e10",
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1rem",
+              "xl": "1.5rem",
+              "full": "9999px"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
   </head>
-  <body>
+  <body class="bg-surface text-on-surface">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -5,13 +5,15 @@ import SpacesOverview from './views/SpacesOverview';
 import SpaceDetailView from './views/SpaceDetailView';
 import TrackerView from './views/TrackerView';
 import SuggestionsView from './views/SuggestionsView';
+import LandingView from './views/LandingView';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AppLayout />}>
+        <Route path="/" element={<LandingView />} />
+        <Route path="/dashboard" element={<AppLayout />}>
           <Route index element={<DashboardView />} />
           <Route path="spaces" element={<SpacesOverview />} />
           <Route path="spaces/:spaceId" element={<SpaceDetailView />} />

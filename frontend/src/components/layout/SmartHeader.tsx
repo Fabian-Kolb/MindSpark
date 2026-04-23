@@ -9,14 +9,16 @@ const SmartHeader = () => {
   // Determine header context based on route
   const getHeaderContext = () => {
     switch (location.pathname) {
-      case '/':
+      case '/dashboard':
         return { title: 'Focus Dashboard', subtitle: 'Welcome back. Ready to spark some ideas?' };
-      case '/spaces':
+      case '/dashboard/spaces':
         return { title: 'Spaces Library', subtitle: 'Organize your contextual zones' };
-      case '/tracker':
+      case '/dashboard/tracker':
         return { title: 'Productivity Tracker', subtitle: 'Analyze your focus segments' };
+      case '/dashboard/suggestions':
+        return { title: 'AI Insights', subtitle: 'Smart suggestions for your day' };
       default:
-        return { title: 'Thoxt', subtitle: 'Get things done.' };
+        return { title: 'MindSpark', subtitle: 'Cultivating digital intelligence.' };
     }
   };
 

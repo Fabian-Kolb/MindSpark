@@ -7,7 +7,7 @@ const SpacesOverview = () => {
   const navigate = useNavigate();
 
   const handleSpaceClick = (spaceId: string) => {
-    navigate(`/spaces/${spaceId}`);
+    navigate(`/dashboard/spaces/${spaceId}`);
   };
 
   return (
